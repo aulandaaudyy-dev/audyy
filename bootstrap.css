@@ -1,0 +1,661 @@
+/* Custom CSS Variables - Original Color Scheme */
+:root {
+    --primary-brown: #54492a;
+    --dark-brown: #312412;
+    --bg-gold: #b9a272;
+    --light-cream: #f8f4e8;
+    --lighter-cream: #f0ebdd;
+    --text-dark: #333;
+    --text-muted: #555;
+    --border-light: #e8ecf4;
+    --profile-gradient-start: #3a2c1f;
+    --profile-gradient-end: #2a1f12;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--bg-gold);
+    min-height: 100vh;
+}
+
+/* Custom Bootstrap Color Extensions */
+.bg-profile {
+    background-color: var(--primary-brown) !important;
+}
+
+.text-profile {
+    color: var(--primary-brown) !important;
+}
+
+/* Profile Card - Header Section */
+.profile-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo-section {
+    background: linear-gradient(135deg, var(--profile-gradient-start), var(--profile-gradient-end));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    min-height: 350px;
+    position: relative;
+}
+
+.profile-photo-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.nama-utama {
+    font-size: 2rem;
+    color: var(--primary-brown);
+    font-weight: 700;
+}
+
+.quote {
+    font-size: 1rem;
+    color: var(--primary-brown);
+    font-style: italic;
+}
+
+.badge.bg-profile {
+    background-color: var(--primary-brown) !important;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+/* Elegant Profile Table */
+.table-profile-elegant {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.table-profile-elegant tr {
+    border-bottom: 1px solid rgba(84, 73, 42, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.table-profile-elegant tr:last-child {
+    border-bottom: none;
+}
+
+.table-profile-elegant tr:hover {
+    background-color: rgba(185, 162, 114, 0.08);
+}
+
+.table-profile-elegant td {
+    padding: 10px 8px;
+    vertical-align: middle;
+}
+
+.table-profile-elegant .profile-icon {
+    width: 36px;
+    text-align: center;
+}
+
+.table-profile-elegant .profile-icon i {
+    color: var(--primary-brown);
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--light-cream), var(--lighter-cream));
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.table-profile-elegant .profile-label {
+    color: var(--primary-brown);
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 130px;
+}
+
+.table-profile-elegant .profile-value {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.table-profile-elegant .profile-value a {
+    color: var(--primary-brown);
+    transition: color 0.2s ease;
+}
+
+.table-profile-elegant .profile-value a:hover {
+    color: var(--dark-brown);
+    text-decoration: underline;
+}
+
+/* Visi Misi Card */
+.visi-misi-card {
+    background: linear-gradient(135deg, var(--light-cream), var(--lighter-cream));
+    border-left: 5px solid var(--primary-brown) !important;
+    border-radius: 12px;
+}
+
+.section-title {
+    color: var(--dark-brown);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.misi-list li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #444;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.misi-list li:last-child {
+    border-bottom: none;
+}
+
+/* Section Headings */
+.section-heading {
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-brown);
+    display: inline-block;
+}
+
+/* Tokoh Cards - Inspirational Figures */
+.tokoh-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.tokoh-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.tokoh-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.tokoh-card .card-title {
+    color: var(--primary-brown);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.tokoh-card .card-text {
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Elegant Goal Cards - Circular Progress */
+.goals-card {
+    background: linear-gradient(to bottom, #ffffff, #faf8f5);
+}
+
+.goal-item-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(84, 73, 42, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.goal-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(84, 73, 42, 0.15);
+    border-color: var(--primary-brown);
+}
+
+.goal-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-brown), var(--dark-brown));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 15px rgba(84, 73, 42, 0.3);
+}
+
+.goal-icon-wrapper i {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.goal-content {
+    flex: 1;
+    width: 100%;
+}
+
+.goal-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.goal-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Timeline - Life Goals */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-brown), var(--bg-gold));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h5 {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Photo & Quote Card */
+.photo-quote-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.photo-container {
+    height: 100%;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.photo-main {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    color: var(--primary-brown);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.blockquote-footer {
+    color: var(--dark-brown);
+    font-weight: 600;
+}
+
+/* Music Cards - Spotify Section */
+.music-card {
+    background: linear-gradient(135deg, #f8f4e8, #fff);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-3px);
+}
+
+.music-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0;
+}
+
+/* Spotify Button */
+.btn-spotify {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-spotify:hover {
+    background-color: #1ed760;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+}
+
+/* Social Media Contact Section */
+.contact-card {
+    background: linear-gradient(to bottom, #ffffff, #faf8f5);
+    border-radius: 16px;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: white;
+    border: 2px solid transparent;
+    height: 100%;
+    min-height: 140px;
+}
+
+.social-btn:hover {
+    transform: translateY(-8px);
+    border-color: transparent;
+}
+
+.social-btn .social-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-btn span {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+/* Instagram */
+.social-btn-instagram:hover {
+    box-shadow: 0 12px 30px rgba(225, 48, 108, 0.3);
+}
+
+.social-btn-instagram:hover .social-icon {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-btn-instagram:hover span {
+    color: #cc2366;
+}
+
+/* WhatsApp */
+.social-btn-whatsapp:hover {
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3);
+}
+
+.social-btn-whatsapp:hover .social-icon {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-btn-whatsapp:hover span {
+    color: #25D366;
+}
+
+/* TikTok */
+.social-btn-tiktok:hover {
+    box-shadow: 0 12px 30px rgba(0, 242, 234, 0.3);
+}
+
+.social-btn-tiktok:hover .social-icon {
+    background: linear-gradient(45deg, #00f2ea, #ff0050);
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-btn-tiktok:hover span {
+    color: #ff0050;
+}
+
+/* Email */
+.social-btn-email:hover {
+    box-shadow: 0 12px 30px rgba(234, 67, 53, 0.3);
+}
+
+.social-btn-email:hover .social-icon {
+    background: linear-gradient(45deg, #EA4335, #D93025);
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-btn-email:hover span {
+    color: #EA4335;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--profile-gradient-start), var(--profile-gradient-end));
+    color: white;
+    border-radius: 12px 12px 0 0;
+    margin-top: 40px;
+}
+
+footer .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.social-links a {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: scale(1.3);
+    color: #fff !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-photo-section {
+        min-height: 250px;
+        padding: 25px;
+    }
+    
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .nama-utama {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .quote {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .desc {
+        text-align: center;
+    }
+    
+    .section-heading {
+        font-size: 1.3rem;
+    }
+    
+    .tokoh-img {
+        height: 160px;
+    }
+    
+    .photo-container {
+        min-height: 250px;
+    }
+    
+    .quote-text {
+        font-size: 1rem;
+    }
+    
+    .timeline::before {
+        left: 5px;
+    }
+    
+    .timeline-badge {
+        left: -30px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+    }
+    
+    .timeline-item {
+        padding-left: 20px;
+    }
+    
+    .timeline-content h5 {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .profile-card .card-body {
+        padding: 20px !important;
+    }
+    
+    .profile-label {
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    
+    .table-profile td {
+        font-size: 0.8rem;
+        padding: 4px 8px 4px 0;
+    }
+    
+    .music-card {
+        padding: 15px !important;
+    }
+    
+    .btn-spotify {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+}
+
+/* Animation for cards on load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-gold);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-brown);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-brown);
+}

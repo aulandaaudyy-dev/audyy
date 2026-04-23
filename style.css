@@ -78,7 +78,6 @@ h1 {
 
 .tabel-data tr td:first-child {
     color: #54492a;
-667eea;
     font-weight: 600;
     padding: 8px 15px 8px 0;
     width: 120px;
@@ -156,8 +155,8 @@ table[cellpadding="8"] {
 }
 
 table[cellpadding="8"] thead th {
-    background: 54492a;
-    background: #f8f4e8;
+    background: #54492a;
+    color: white;
     padding: 12px;
     font-weight: 600;
     text-align: left;
@@ -213,3 +212,10 @@ a:hover {
         width: 100px;
     }
 }
+
+/* ========================================
+   LINK KE BOOTSTRAP CSS
+   Import custom Bootstrap styles
+   ======================================== */
+/* Note: File bootstrap.css di-load terpisah di bootstrap.html */
+/* Custom styles ini dapat dikombinasikan dengan Bootstrap */
